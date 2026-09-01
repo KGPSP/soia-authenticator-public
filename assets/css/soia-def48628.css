@@ -202,7 +202,13 @@ li { max-width: 70ch; }
   background: var(--soia-panel);
   content: "";
 }
-.hero-visual img { border-radius: 1.15rem; }
+.hero-visual img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  border-radius: 1.15rem;
+  object-fit: contain;
+}
 
 .metric-grid,
 .card-grid,
@@ -264,9 +270,13 @@ li { max-width: 70ch; }
 }
 .screenshots figure { margin: 0; }
 .screenshots img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
   border: 1px solid var(--soia-border);
   border-radius: .75rem;
   background: var(--soia-panel);
+  object-fit: contain;
 }
 .screenshots figcaption {
   padding-top: .7rem;

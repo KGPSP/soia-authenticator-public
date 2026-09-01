@@ -23,6 +23,16 @@ test("publishes only phone screenshots and no tablet family", async () => {
   assert.equal(report.tabletAssets, 0);
 });
 
+test("serves the 9:16 screenshot layout from a fingerprinted stylesheet", async () => {
+  const report = await checkSite(root);
+
+  assert.match(
+    report.stylesheetAsset,
+    /^\/soia-authenticator-public\/assets\/css\/soia-[a-f0-9]{8}\.css$/u,
+  );
+  assert.equal(report.screenshotAspectRatio, "9 / 16");
+});
+
 test("keeps public contacts on their intended pages", async () => {
   const support = await readFile(join(root, "pomoc/index.html"), "utf8");
   const privacy = await readFile(

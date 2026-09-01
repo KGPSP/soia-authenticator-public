@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { lstat, readFile, readdir } from "node:fs/promises";
 import { dirname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -116,6 +117,7 @@ export async function checkSite(siteRoot) {
   const files = await collectFiles(root);
   const forbiddenMatches = [];
   const externalRuntimeUrls = [];
+  const stylesheetAssets = new Set();
 
   for (const file of files) {
     if (forbiddenFileNames.some((pattern) => pattern.test(file))) {
@@ -146,9 +148,13 @@ export async function checkSite(siteRoot) {
     if (!html.includes(`<link rel="canonical" href="${expectedCanonical}">`)) {
       throw new Error(`Nieprawidłowy canonical: ${file}`);
     }
-    if (!html.includes(`${basePath}assets/css/soia.css`)) {
+    const stylesheetMatches = [
+      ...html.matchAll(/<link rel="stylesheet" href="([^"]+)">/gu),
+    ];
+    if (stylesheetMatches.length !== 1) {
       throw new Error(`Brak lokalnego arkusza stylów: ${file}`);
     }
+    stylesheetAssets.add(stylesheetMatches[0][1]);
     for (const pattern of forbiddenPagePatterns) {
       if (pattern.test(html)) forbiddenMatches.push(`${file}:${pattern}`);
     }
@@ -183,7 +189,32 @@ export async function checkSite(siteRoot) {
     }
   }
 
-  const css = await readFile(join(root, "assets/css/soia.css"), "utf8");
+  if (stylesheetAssets.size !== 1) {
+    throw new Error("Wszystkie strony muszą używać tego samego arkusza stylów.");
+  }
+  const stylesheetAsset = [...stylesheetAssets][0];
+  const fingerprintMatch = stylesheetAsset.match(
+    /^\/soia-authenticator-public\/assets\/css\/soia-([a-f0-9]{8})\.css$/u,
+  );
+  if (!fingerprintMatch) {
+    throw new Error("Arkusz stylów musi mieć fingerprint zapobiegający staremu cache.");
+  }
+  const cssPath = stylesheetAsset.slice(basePath.length);
+  const cssBuffer = await readFile(join(root, cssPath));
+  const cssFingerprint = createHash("sha256").update(cssBuffer).digest("hex");
+  if (!cssFingerprint.startsWith(fingerprintMatch[1])) {
+    throw new Error("Fingerprint w nazwie arkusza nie odpowiada jego treści.");
+  }
+  const css = cssBuffer.toString("utf8");
+  const screenshotRule = css.match(/\.screenshots img\s*\{([^}]*)\}/u)?.[1] ?? "";
+  if (
+    !/width:\s*100%/u.test(screenshotRule) ||
+    !/height:\s*auto/u.test(screenshotRule) ||
+    !/aspect-ratio:\s*9\s*\/\s*16/u.test(screenshotRule) ||
+    !/object-fit:\s*contain/u.test(screenshotRule)
+  ) {
+    throw new Error("Grafiki sklepowe muszą zachowywać proporcje 9:16.");
+  }
   const requiredTokens = [
     "#0B1523",
     "#101D30",
@@ -225,6 +256,8 @@ export async function checkSite(siteRoot) {
     routeCount: requiredPages.size,
     language: "pl",
     basePath,
+    stylesheetAsset,
+    screenshotAspectRatio: "9 / 16",
     googlePhoneScreenshots: files.filter((path) =>
       path.startsWith("assets/google-play/phone/"),
     ).length,
