@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Oficjalne informacje o aplikacji SOIA Authenticator wydawanej przez Komendę Główną Państwowej Straży Pożarnej.">
+  <title>SOIA Authenticator — kody TOTP offline</title>
+  <link rel="canonical" href="https://kgpsp.github.io/soia-authenticator-public/">
+  <link rel="icon" href="/soia-authenticator-public/assets/branding/soia-authenticator-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/soia-authenticator-public/assets/css/soia.css">
+</head>
+<body>
+  <a class="skip-link" href="#tresc">Przejdź do treści</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/soia-authenticator-public/" aria-current="page">
+        <img src="/soia-authenticator-public/assets/branding/soia-authenticator-mark.svg" alt="">
+        <span class="brand-name">SOIA Authenticator</span>
+      </a>
+      <nav class="site-nav" aria-label="Główna nawigacja">
+        <a href="/soia-authenticator-public/" aria-current="page">Aplikacja</a>
+        <a href="/soia-authenticator-public/polityka-prywatnosci/">Prywatność</a>
+        <a href="/soia-authenticator-public/pomoc/">Pomoc</a>
+        <a href="/soia-authenticator-public/bezpieczenstwo/">Bezpieczeństwo</a>
+        <a href="/soia-authenticator-public/wydania/">Wydania</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="tresc" class="content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Kody TOTP pozostają na telefonie</h1>
+        <p class="lead">SOIA Authenticator to oficjalna aplikacja Komendy Głównej Państwowej Straży Pożarnej do generowania standardowych kodów jednorazowych całkowicie offline.</p>
+        <div class="hero-actions">
+          <a class="button button--primary" href="/soia-authenticator-public/polityka-prywatnosci/">Przeczytaj politykę prywatności</a>
+          <a class="button" href="/soia-authenticator-public/pomoc/">Przejdź do pomocy</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="/soia-authenticator-public/assets/google-play/phone/01-kody-offline.png" width="1080" height="1920" alt="Ekran SOIA Authenticator z dwoma syntetycznymi kodami TOTP offline">
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="metryki-title">
+      <div class="section-heading">
+        <h2 id="metryki-title">Prywatność w założeniach</h2>
+        <p>Brak konta, chmury i śledzenia nie jest ustawieniem opcjonalnym — to granica pierwszej wersji aplikacji.</p>
+      </div>
+      <div class="metric-grid">
+        <div class="metric"><strong>0</strong><span>kont użytkownika i usług backendowych</span></div>
+        <div class="metric"><strong>OFFLINE</strong><span>generowanie kodów z czasu telefonu</span></div>
+        <div class="metric"><strong>PHONE</strong><span>wyłącznie iPhone i telefony z Androidem</span></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ochrona-title">
+      <div class="section-heading">
+        <h2 id="ochrona-title">Jak aplikacja chroni dostęp</h2>
+        <p>Każdy element ogranicza widoczność lub przemieszczanie poufnych danych.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card"><span class="number">01 / LOKALNIE</span><h3>Standardowe TOTP</h3><p>Kody są obliczane na urządzeniu. Aplikacja nie wysyła sekretów do KG PSP ani do własnego serwera.</p></article>
+        <article class="card"><span class="number">02 / DOSTĘP</span><h3>Blokada systemowa</h3><p>Dostęp może wymagać uwierzytelnienia skonfigurowanego w telefonie. Aplikacja nie otrzymuje danych biometrycznych.</p></article>
+        <article class="card"><span class="number">03 / EKRAN</span><h3>Maskowanie i ochrona</h3><p>Poufne widoki są maskowane w tle, a ochrona przechwytywania ogranicza zrzuty i nagrania ekranu.</p></article>
+        <article class="card"><span class="number">04 / KOPIA</span><h3>Szyfrowany eksport ręczny</h3><p>Plik <span class="mono">.soiaauth</span> powstaje wyłącznie po decyzji użytkownika i jest szyfrowany oddzielnym hasłem.</p></article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ekrany-title">
+      <div class="section-heading">
+        <h2 id="ekrany-title">Aplikacja na telefon</h2>
+        <p>Materiały zawierają wyłącznie stałe dane syntetyczne. Nie pokazują rzeczywistych kont, kodów ani sekretów.</p>
+      </div>
+      <div class="screenshots">
+        <figure><img src="/soia-authenticator-public/assets/google-play/phone/01-kody-offline.png" width="1080" height="1920" alt="Lista syntetycznych kodów TOTP generowanych offline"><figcaption>Kody TOTP offline</figcaption></figure>
+        <figure><img src="/soia-authenticator-public/assets/google-play/phone/02-szyfrowana-kopia.png" width="1080" height="1920" alt="Ekran tworzenia szyfrowanej kopii SOIA Authenticator"><figcaption>Szyfrowana kopia ręczna</figcaption></figure>
+        <figure><img src="/soia-authenticator-public/assets/google-play/phone/03-dodaj-konto.png" width="1080" height="1920" alt="Wybór dodania konta przez kod QR lub klucz ręczny"><figcaption>Dodawanie konta</figcaption></figure>
+        <figure><img src="/soia-authenticator-public/assets/google-play/phone/04-ochrona-aplikacji.png" width="1080" height="1920" alt="Ustawienia blokady, maskowania i ochrony zrzutów"><figcaption>Ochrona aplikacji</figcaption></figure>
+      </div>
+      <div class="notice"><strong>Tylko smartfony.</strong> Pierwsze wydanie jest przeznaczone wyłącznie na iPhone oraz telefony z Androidem. Nie jest publikowane na iPadzie, tabletach z Androidem, ChromeOS ani Android XR.</div>
+    </section>
+
+    <section class="section" aria-labelledby="wydawca-title">
+      <div class="section-heading">
+        <h2 id="wydawca-title">Oficjalny wydawca</h2>
+        <p>Publiczna strona sklepu, pomoc i polityka korzystają z tej samej tożsamości instytucjonalnej.</p>
+      </div>
+      <dl class="key-value">
+        <dt>Wydawca</dt><dd>Komenda Główna Państwowej Straży Pożarnej</dd>
+        <dt>Adres</dt><dd>ul. Podchorążych 38, 00-463 Warszawa</dd>
+        <dt>Pomoc</dt><dd><a href="mailto:informacje@kg.straz.gov.pl">informacje@kg.straz.gov.pl</a></dd>
+        <dt>Język i dostępność</dt><dd>polski, wyłącznie Polska</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>© 2026 Komenda Główna Państwowej Straży Pożarnej</div>
+      <nav class="footer-links" aria-label="Informacje uzupełniające">
+        <a href="/soia-authenticator-public/dane-i-prywatnosc/">Dane i prywatność</a>
+        <a href="/soia-authenticator-public/dostepnosc/">Dostępność</a>
+        <a href="/soia-authenticator-public/informacje-prawne/">Informacje prawne</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

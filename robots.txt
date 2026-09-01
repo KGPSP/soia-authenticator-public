@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kgpsp.github.io/soia-authenticator-public/sitemap.xml

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "status": "DRAFT_NOT_SUBMITTED",
+  "primaryLanguage": "pl",
+  "category": "UTILITIES",
+  "price": "FREE",
+  "distribution": "PUBLIC",
+  "countries": [
+    "PL"
+  ],
+  "deviceFamilies": [
+    "IPHONE"
+  ],
+  "dataCollected": false,
+  "requiresAccount": false,
+  "automaticRelease": false,
+  "phasedRelease": false,
+  "version": "1.0.0",
+  "build": null,
+  "supportEmail": "informacje@kg.straz.gov.pl",
+  "privacyEmail": "iod@kg.straz.gov.pl"
+}

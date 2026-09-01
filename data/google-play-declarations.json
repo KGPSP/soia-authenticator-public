@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "status": "DRAFT_NOT_SUBMITTED",
+  "governmentApp": true,
+  "ads": false,
+  "requiresAccount": false,
+  "dataCollected": false,
+  "dataShared": false,
+  "newsApp": false,
+  "financialFeatures": false,
+  "healthFeatures": false,
+  "inAppPurchases": false,
+  "targetAudience": [
+    "18_PLUS"
+  ],
+  "countries": [
+    "PL"
+  ],
+  "formFactors": [
+    "PHONE"
+  ],
+  "publisher": {
+    "name": "Komenda Główna Państwowej Straży Pożarnej",
+    "address": "ul. Podchorążych 38, 00-463 Warszawa",
+    "supportEmail": "informacje@kg.straz.gov.pl",
+    "privacyEmail": "iod@kg.straz.gov.pl"
+  }
+}

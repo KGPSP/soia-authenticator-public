@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Polityka prywatności aplikacji SOIA Authenticator wydawanej przez Komendę Główną Państwowej Straży Pożarnej.">
+  <title>Polityka prywatności — SOIA Authenticator</title>
+  <link rel="canonical" href="https://kgpsp.github.io/soia-authenticator-public/polityka-prywatnosci/">
+  <link rel="icon" href="/soia-authenticator-public/assets/branding/soia-authenticator-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/soia-authenticator-public/assets/css/soia.css">
+</head>
+<body>
+  <a class="skip-link" href="#tresc">Przejdź do treści</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="/soia-authenticator-public/"><img src="/soia-authenticator-public/assets/branding/soia-authenticator-mark.svg" alt=""><span class="brand-name">SOIA Authenticator</span></a>
+    <nav class="site-nav" aria-label="Główna nawigacja"><a href="/soia-authenticator-public/">Aplikacja</a><a href="/soia-authenticator-public/polityka-prywatnosci/" aria-current="page">Prywatność</a><a href="/soia-authenticator-public/pomoc/">Pomoc</a><a href="/soia-authenticator-public/bezpieczenstwo/">Bezpieczeństwo</a><a href="/soia-authenticator-public/wydania/">Wydania</a></nav>
+  </div></header>
+  <main id="tresc" class="content content--narrow">
+    <header class="page-head"><h1>Polityka prywatności</h1><p class="lead">Informacja o przetwarzaniu danych w aplikacji mobilnej SOIA Authenticator. Obowiązuje od 1 września 2026 r.</p></header>
+
+    <section class="document-section" aria-labelledby="administrator"><h2 id="administrator">1. Administrator i kontakt</h2>
+      <p>Administratorem danych osobowych w zakresie, w którym dane mogą zostać przekazane KG PSP, jest Komendant Główny Państwowej Straży Pożarnej, ul. Podchorążych 38, 00-463 Warszawa.</p>
+      <p>Kontakt dotyczący działania aplikacji: <a href="mailto:informacje@kg.straz.gov.pl">informacje@kg.straz.gov.pl</a>.</p>
+      <p>Kontakt z Inspektorem Ochrony Danych wyłącznie w sprawach ochrony danych: <a href="mailto:iod@kg.straz.gov.pl">iod@kg.straz.gov.pl</a>.</p>
+    </section>
+
+    <section class="document-section" aria-labelledby="lokalne"><h2 id="lokalne">2. Dane przetwarzane lokalnie</h2>
+      <p>Aplikacja przechowuje na telefonie informacje potrzebne do generowania kodów TOTP: nazwę wystawcy, nazwę konta, parametry algorytmu oraz poufny sekret TOTP. Kody jednorazowe są obliczane lokalnie na podstawie tych parametrów i czasu urządzenia.</p>
+      <p>Poufne rekordy są przechowywane z użyciem mechanizmów chronionego magazynu systemu iOS lub Android. Lokalna baza aplikacji może zawierać dane techniczne i ustawienia, ale nie służy do wysyłania danych do KG PSP.</p>
+      <div class="notice notice--safe"><strong>Brak transmisji do KG PSP.</strong> W wersji 1 aplikacja nie posiada konta użytkownika, własnego backendu, synchronizacji, reklam, telemetryki ani zewnętrznego modułu raportowania awarii.</div>
+    </section>
+
+    <section class="document-section" aria-labelledby="uprawnienia"><h2 id="uprawnienia">3. Funkcje telefonu</h2>
+      <ul>
+        <li><strong>Aparat:</strong> używany wyłącznie po decyzji użytkownika do lokalnego odczytania kodu QR. Obraz nie jest przesyłany do KG PSP.</li>
+        <li><strong>Uwierzytelnienie systemowe:</strong> aplikacja otrzymuje jedynie wynik powodzenia lub niepowodzenia. Nie otrzymuje i nie zapisuje danych biometrycznych.</li>
+        <li><strong>Schowek:</strong> wybrany kod może zostać skopiowany po działaniu użytkownika. Zawartością schowka zarządza system operacyjny i inne aplikacje mogą mieć do niej dostęp zgodnie z zasadami systemu.</li>
+        <li><strong>Pliki i udostępnianie:</strong> systemowy wybór pliku oraz arkusz udostępniania są używane tylko przy ręcznym imporcie lub eksporcie szyfrowanej kopii.</li>
+      </ul>
+    </section>
+
+    <section class="document-section" aria-labelledby="kopia"><h2 id="kopia">4. Szyfrowana kopia</h2>
+      <p>Użytkownik może ręcznie utworzyć plik <span class="mono">.soiaauth</span> zabezpieczony podanym hasłem. KG PSP nie otrzymuje pliku ani hasła i nie może ich odzyskać. Użytkownik decyduje, gdzie zapisuje lub komu przekazuje kopię.</p>
+      <p>Usunięcie pliku z telefonu lub wybranej usługi przechowywania odbywa się poza aplikacją i podlega zasadom tej usługi.</p>
+    </section>
+
+    <section class="document-section" aria-labelledby="retencja"><h2 id="retencja">5. Przechowywanie i usuwanie</h2>
+      <p>Dane kont pozostają na telefonie do czasu ich usunięcia w aplikacji, usunięcia danych aplikacji albo odinstalowania aplikacji zgodnie z zachowaniem systemu operacyjnego. Zaszyfrowane kopie istnieją do czasu ich usunięcia przez użytkownika w miejscu, w którym zostały zapisane.</p>
+      <p>Bez wcześniejszej kopii aplikacja ani KG PSP nie mogą odtworzyć utraconych sekretów TOTP.</p>
+    </section>
+
+    <section class="document-section" aria-labelledby="platformy"><h2 id="platformy">6. Sklepy, system i usługi zewnętrzne</h2>
+      <p>Pobranie aplikacji z Google Play lub App Store, działanie systemu Android albo iOS oraz użycie wybranej usługi plikowej lub udostępniania może wiązać się z odrębnym przetwarzaniem danych przez Google, Apple, producenta telefonu lub wybranego dostawcę. Zasady tych podmiotów są niezależne od niniejszej polityki.</p>
+      <p>Ta statyczna witryna nie używa analityki, reklam, formularzy, zewnętrznych fontów ani plików cookie ustawianych przez kod strony. GitHub może przetwarzać dane techniczne związane z dostarczeniem GitHub Pages zgodnie z własnymi zasadami.</p>
+    </section>
+
+    <section class="document-section" aria-labelledby="prawa"><h2 id="prawa">7. Prawa i skargi</h2>
+      <p>W sprawach dotyczących danych przekazanych KG PSP można skontaktować się z Inspektorem Ochrony Danych pod adresem <a href="mailto:iod@kg.straz.gov.pl">iod@kg.straz.gov.pl</a>. Osobie, której dane dotyczą, przysługują prawa wynikające z właściwych przepisów, w tym prawo złożenia skargi do Prezesa Urzędu Ochrony Danych Osobowych.</p>
+      <p>Dane przechowywane wyłącznie lokalnie należy usuwać bezpośrednio w aplikacji lub w ustawieniach telefonu, ponieważ KG PSP nie ma technicznego dostępu do tych danych.</p>
+    </section>
+
+    <section class="document-section" aria-labelledby="zmiany"><h2 id="zmiany">8. Zmiany polityki</h2>
+      <p>Aktualna wersja polityki jest publikowana pod tym samym adresem. Data obowiązywania zostanie zmieniona przy istotnej aktualizacji. Zmiana sposobu działania aplikacji wymagająca aktualizacji deklaracji sklepowych będzie najpierw poddana ponownej ocenie prywatności.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><div>© 2026 Komenda Główna Państwowej Straży Pożarnej</div><nav class="footer-links" aria-label="Informacje uzupełniające"><a href="/soia-authenticator-public/dane-i-prywatnosc/">Dane i prywatność</a><a href="/soia-authenticator-public/dostepnosc/">Dostępność</a><a href="/soia-authenticator-public/informacje-prawne/">Informacje prawne</a></nav></div></footer>
+</body>
+</html>

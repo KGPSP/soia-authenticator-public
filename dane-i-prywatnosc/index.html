@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Publiczne podsumowanie Data Safety i App Privacy dla SOIA Authenticator.">
+  <title>Dane i prywatność — SOIA Authenticator</title>
+  <link rel="canonical" href="https://kgpsp.github.io/soia-authenticator-public/dane-i-prywatnosc/">
+  <link rel="icon" href="/soia-authenticator-public/assets/branding/soia-authenticator-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/soia-authenticator-public/assets/css/soia.css">
+</head>
+<body>
+  <a class="skip-link" href="#tresc">Przejdź do treści</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="/soia-authenticator-public/"><img src="/soia-authenticator-public/assets/branding/soia-authenticator-mark.svg" alt=""><span class="brand-name">SOIA Authenticator</span></a><nav class="site-nav" aria-label="Główna nawigacja"><a href="/soia-authenticator-public/">Aplikacja</a><a href="/soia-authenticator-public/polityka-prywatnosci/">Prywatność</a><a href="/soia-authenticator-public/pomoc/">Pomoc</a><a href="/soia-authenticator-public/bezpieczenstwo/">Bezpieczeństwo</a><a href="/soia-authenticator-public/wydania/">Wydania</a></nav></div></header>
+  <main id="tresc" class="content content--narrow">
+    <header class="page-head"><h1>Dane i prywatność</h1><p class="lead">Publiczne objaśnienie deklaracji Google Play Data Safety i Apple App Privacy dla zakresu wersji 1.</p></header>
+    <div class="notice notice--safe"><strong>Deklarowany stan wersji 1:</strong> aplikacja nie zbiera danych użytkownika i nie udostępnia danych użytkownika podmiotom trzecim.</div>
+    <section class="document-section"><h2>Co oznacza „nie zbiera”</h2><p>KG PSP nie otrzymuje przez aplikację nazw kont, sekretów TOTP, kodów jednorazowych, danych biometrycznych ani zawartości kopii. Aplikacja nie ma własnego backendu, konta użytkownika, synchronizacji, reklam ani telemetryki.</p><p>Dane są jednak przetwarzane lokalnie na telefonie, ponieważ bez tego aplikacja nie mogłaby generować kodów. Lokalnego przetwarzania nie należy mylić z przesłaniem danych do wydawcy.</p></section>
+    <section class="document-section"><h2>Lokalne mechanizmy</h2><dl class="key-value"><dt>Chroniony magazyn</dt><dd>Poufne rekordy kont przechowywane z użyciem zabezpieczeń iOS Keychain lub Android Keystore.</dd><dt>Lokalna baza</dt><dd>Ustawienia i dane techniczne działania aplikacji; bez usługi synchronizacji.</dd><dt>Aparat</dt><dd>Lokalne odczytanie wybranego kodu QR po udzieleniu uprawnienia.</dd><dt>Schowek</dt><dd>Kopiowanie bieżącego kodu wyłącznie po działaniu użytkownika.</dd><dt>Uwierzytelnienie</dt><dd>System zwraca aplikacji wynik operacji; aplikacja nie otrzymuje danych biometrycznych.</dd><dt>Kopia</dt><dd>Ręczny import i eksport zaszyfrowanego pliku przez systemowe interfejsy plików.</dd></dl></section>
+    <section class="document-section"><h2>Granica deklaracji</h2><p>To podsumowanie opisuje funkcje aplikacji. Nie zastępuje formularzy zapisanych w Play Console i App Store Connect. Przed każdą publikacją deklaracje są ponownie porównywane z finalnym pakietem aplikacji, bibliotekami i zachowaniem systemowym.</p><p>Google Play, App Store, Android, iOS oraz wybrana przez użytkownika usługa przechowywania pliku działają według własnych zasad prywatności.</p></section>
+    <section class="document-section"><h2>Pełna polityka</h2><p>Szczegółowe informacje o administratorze, retencji, usuwaniu i prawach znajdują się w <a href="/soia-authenticator-public/polityka-prywatnosci/">polityce prywatności</a>.</p></section>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><div>© 2026 Komenda Główna Państwowej Straży Pożarnej</div><nav class="footer-links" aria-label="Informacje uzupełniające"><a href="/soia-authenticator-public/dane-i-prywatnosc/" aria-current="page">Dane i prywatność</a><a href="/soia-authenticator-public/dostepnosc/">Dostępność</a><a href="/soia-authenticator-public/informacje-prawne/">Informacje prawne</a></nav></div></footer>
+</body>
+</html>

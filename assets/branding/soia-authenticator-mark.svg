@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="SOIA Authenticator — kłódka">
+  <circle cx="60" cy="60" r="56" fill="#F08A00"/>
+  <path d="M60 31 L93 87 L27 87 Z" fill="#1D5FAE" stroke="#1D5FAE" stroke-width="11" stroke-linejoin="round"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M52 65 L52 59 A8 8 0 0 1 68 59 L68 65"/>
+    <rect x="47.5" y="65" width="25" height="15.5" rx="3"/>
+  </g>
+</svg>
