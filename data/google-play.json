@@ -4,7 +4,7 @@
   "locale": "pl-PL",
   "appName": "SOIA Authenticator",
   "shortDescription": "Standardowe kody TOTP offline z blokadą i szyfrowaną kopią.",
-  "fullDescription": "SOIA Authenticator generuje standardowe kody TOTP całkowicie na urządzeniu. Dodawaj konta SOIA i innych usług przez QR lub ręczny klucz Base32.\n\nAplikacja obsługuje SHA-1, SHA-256 i SHA-512, kody 6- i 8-cyfrowe oraz standardowe konfiguracje TOTP. Poufne ekrany są chronione, a dostęp może wymagać systemowego uwierzytelnienia urządzenia.\n\nRęczna kopia .soiaauth jest szyfrowana hasłem. Nie ma automatycznej synchronizacji ani resetu hasła kopii — zachowaj plik i hasło oddzielnie.\n\nBrak konta, backendu, reklam, telemetryki, crash SDK i aktualizacji runtime. Kod produkcyjny nie inicjuje ruchu sieciowego.",
+  "fullDescription": "SOIA Authenticator generuje standardowe kody TOTP całkowicie na urządzeniu. Dodawaj konta SOIA i innych usług przez QR lub ręczny klucz Base32.\n\nAplikacja obsługuje SHA-1, SHA-256 i SHA-512, kody 6-, 7- i 8-cyfrowe oraz standardowe konfiguracje TOTP. Poufne ekrany są chronione, a dostęp może wymagać systemowego uwierzytelnienia urządzenia.\n\nRęczna kopia .soiaauth jest szyfrowana hasłem. Nie ma automatycznej synchronizacji ani resetu hasła kopii — zachowaj plik i hasło oddzielnie.\n\nBrak konta, backendu, reklam, telemetryki, crash SDK i aktualizacji runtime. Kod produkcyjny nie inicjuje ruchu sieciowego.",
   "privacyPolicyUrl": "https://kgpsp.github.io/soia-authenticator-public/polityka-prywatnosci/",
   "developerName": "Komenda Główna Państwowej Straży Pożarnej",
   "contactEmail": "informacje@kg.straz.gov.pl",
